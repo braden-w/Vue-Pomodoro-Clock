@@ -59,7 +59,9 @@ export default {
       return time.toString()
     },
     start() {
-      setInterval(() => {}, 1000)
+      setInterval(() => {
+        this.totalSeconds -= 1
+      }, 1000)
     },
     stop() {},
     reset() {},
