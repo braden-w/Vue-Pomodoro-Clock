@@ -7,6 +7,7 @@
                     v-for="(timer, i) in timers"
                     :key="i"
                     label="Pomodoro"
+                    type="number"
                     v-model="timers[i].minutes"
                 />
             </v-card-text>
