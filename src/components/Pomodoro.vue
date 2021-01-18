@@ -109,7 +109,10 @@ export default {
             // TODO: Make this toggleable
             this.reset();
         },
-        save() {
+        save(timerData) {
+            this.timers = this.timers.map((timer, i) => {
+                return { ...timer, minutes: parseInt(timerData[i]) };
+            });
             this.closeSettings();
         }
     }
