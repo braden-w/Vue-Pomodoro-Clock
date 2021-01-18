@@ -5,30 +5,30 @@
         {{ timer.name }}
       </v-tab>
       <v-tabs-items v-model="currentTimer">
-        <v-tab-item>
-          <v-card
-            color="basil"
-            flat
-            class="pa-5 d-flex flex-column justify-center align-center"
-          >
-            <h1 class="time">{{ displayMinutes }}:{{ displaySeconds }}</h1>
-            <div class="buttons">
-              <v-btn color="primary" @click="start"
-                ><v-icon left small>mdi-play-circle-outline</v-icon>Start</v-btn
-              >
-              <v-btn color="error" @click="stop">
-                <v-icon left small>mdi-stop-circle-outline</v-icon>
-                Stop</v-btn
-              >
-              <v-btn @click="reset" :disabled="isRunning">
-                <v-icon left small>mdi-restart</v-icon>
-                Reset</v-btn
-              >
-            </div>
-          </v-card>
-        </v-tab-item>
+        <v-tab-item> </v-tab-item>
       </v-tabs-items>
     </v-tabs>
+
+    <v-card
+      color="basil"
+      flat
+      class="pa-5 d-flex flex-column justify-center align-center"
+    >
+      <h1 class="time">{{ displayMinutes }}:{{ displaySeconds }}</h1>
+      <div class="buttons">
+        <v-btn color="primary" @click="start"
+          ><v-icon left small>mdi-play-circle-outline</v-icon>Start</v-btn
+        >
+        <v-btn color="error" @click="stop">
+          <v-icon left small>mdi-stop-circle-outline</v-icon>
+          Stop</v-btn
+        >
+        <v-btn @click="reset" :disabled="isRunning">
+          <v-icon left small>mdi-restart</v-icon>
+          Reset</v-btn
+        >
+      </div>
+    </v-card>
   </v-card>
 </template>
 
