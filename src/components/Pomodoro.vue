@@ -40,6 +40,13 @@ export default {
       tabsTitles: ["Pomodoro", "Short Break", "Long Break"],
     }
   },
+  methods: {
+    start() {
+      setInterval(() => {}, 1000)
+    },
+    stop() {},
+    reset() {},
+  },
 }
 </script>
 
