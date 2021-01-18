@@ -20,7 +20,7 @@
                 <v-icon left small>mdi-stop-circle-outline</v-icon>
                 Stop</v-btn
               >
-              <v-btn @click="reset">
+              <v-btn @click="reset" :disabled="isRunning">
                 <v-icon left small>mdi-restart</v-icon>
                 Reset</v-btn
               >
@@ -36,6 +36,7 @@
 export default {
   data() {
     return {
+      isRunning: false,
       display: { minutes: "00", seconds: "00" },
       totalSeconds: 25 * 60,
       timerType: 0,
@@ -59,11 +60,15 @@ export default {
       return time.toString()
     },
     start() {
-      this.timerInstance = setInterval(() => {
-        this.totalSeconds -= 1
-      }, 1000)
+      if (!this.isRunning) {
+        this.timerInstance = setInterval(() => {
+          this.totalSeconds -= 1
+        }, 1000)
+      }
+      this.isRunning = true
     },
     stop() {
+      this.isRunning = false
       clearInterval(this.timerInstance)
     },
     reset() {
