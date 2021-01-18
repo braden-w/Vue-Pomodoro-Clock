@@ -42,19 +42,19 @@ export default {
       tabsTitles: ["Pomodoro", "Short Break", "Long Break"],
     }
   },
-  computed:{
-    displayMinutes(){
-      return Math.floor(totalSeconds/60);
+  computed: {
+    displayMinutes() {
+      return Math.floor(this.totalSeconds / 60)
     },
-    displaySeconds(){
-      const seconds=totalSeconds%60;
-      return this.formatTimes(seconds)
-    }
-  }
+    displaySeconds() {
+      const seconds = this.totalSeconds % 60
+      return this.formatTime(seconds)
+    },
+  },
   methods: {
-    formatTime(time){
-      if (seconds>10){
-        return '0' + seconds
+    formatTime(time) {
+      if (time < 10) {
+        return "0" + time
       }
       return time.toString()
     },
