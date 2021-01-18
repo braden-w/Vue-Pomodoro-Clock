@@ -1,7 +1,9 @@
 <template>
   <v-card class="mt-8">
-    <v-tabs v-model="timerType">
-      <v-tab v-for="tab in tabsTitles" :key="tab">{{ tab }}</v-tab>
+    <v-tabs v-model="timerType" grow>
+      <v-tab v-for="tab in tabsTitles" :key="tab">
+        {{ tab }}
+      </v-tab>
     </v-tabs>
   </v-card>
 </template>
