@@ -1,10 +1,10 @@
 <template>
   <v-card class="mt-8">
-    <v-tabs v-model="timerType" grow>
-      <v-tab v-for="tab in tabsTitles" :key="tab">
-        {{ tab }}
+    <v-tabs @change="changeCurrentTimer" v-model="currentTimer" grow>
+      <v-tab v-for="timer in timers" :key="timer.name">
+        {{ timer.name }}
       </v-tab>
-      <v-tabs-items v-model="timerType">
+      <v-tabs-items v-model="currentTimer">
         <v-tab-item>
           <v-card
             color="basil"
@@ -39,8 +39,12 @@ export default {
       isRunning: false,
       display: { minutes: "00", seconds: "00" },
       totalSeconds: 25 * 60,
-      timerType: 0,
-      tabsTitles: ["Pomodoro", "Short Break", "Long Break"],
+      currentTimer: 0,
+      timers: [
+        { name: "Pomodoro", minutes: 25 },
+        { name: "Short Break", minutes: 5 },
+        { name: "Long Break", minutes: 10 },
+      ],
     }
   },
   computed: {
@@ -75,6 +79,7 @@ export default {
       this.stop()
       this.totalSeconds = 25 * 60
     },
+    changeCurrentTimer() {},
   },
 }
 </script>
