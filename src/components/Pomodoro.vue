@@ -11,7 +11,7 @@
             flat
             class="pa-5 d-flex flex-column justify-center align-center"
           >
-            <h1 class="time">00:00</h1>
+            <h1 class="time">{{ display.minutes }}:{{ display.seconds }}</h1>
             <div class="buttons">
               <v-btn color="primary"
                 ><v-icon left small>mdi-play-circle-outline</v-icon>Start</v-btn
@@ -36,6 +36,8 @@
 export default {
   data() {
     return {
+      display: { minutes: "00", seconds: "00" },
+      totalSeconds: 25 * 60,
       timerType: 0,
       tabsTitles: ["Pomodoro", "Short Break", "Long Break"],
     }
