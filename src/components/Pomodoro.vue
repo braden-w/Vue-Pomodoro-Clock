@@ -9,7 +9,7 @@
           <v-card color="basil" flat class="pa-5">
             <h1 class="time">00:00</h1>
             <v-btn color="primary">Start</v-btn>
-            <v-btn>Stop</v-btn>
+            <v-btn color="error">Stop</v-btn>
             <v-btn>Reset</v-btn>
           </v-card>
         </v-tab-item>
