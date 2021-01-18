@@ -111,7 +111,7 @@ export default {
         },
         save(timerData) {
             this.timers = this.timers.map((timer, i) => {
-                return { ...timer, minutes: parseInt(timerData[i]) };
+                return { ...timer, minutes: parseInt(timerData[i].minutes) };
             });
             this.closeSettings();
         }
