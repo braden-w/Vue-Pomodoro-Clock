@@ -59,12 +59,17 @@ export default {
       return time.toString()
     },
     start() {
-      setInterval(() => {
+      this.timerInstance = setInterval(() => {
         this.totalSeconds -= 1
       }, 1000)
     },
-    stop() {},
-    reset() {},
+    stop() {
+      clearInterval(this.timerInstance)
+    },
+    reset() {
+      this.stop()
+      this.totalSeconds = 25 * 60
+    },
   },
 }
 </script>
