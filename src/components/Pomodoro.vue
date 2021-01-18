@@ -47,6 +47,9 @@ export default {
 .v-card {
   width: 600px;
 }
+.v-btn {
+  margin: 0 2px;
+}
 .time {
   font-size: 80px;
   font-weight: 400;
