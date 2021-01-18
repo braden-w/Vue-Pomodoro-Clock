@@ -6,7 +6,7 @@
                 <v-text-field
                     v-for="(timer, i) in timers"
                     :key="i"
-                    label="Pomodoro"
+                    :label="timers[i].name"
                     type="number"
                     v-model="timers[i].minutes"
                 />
