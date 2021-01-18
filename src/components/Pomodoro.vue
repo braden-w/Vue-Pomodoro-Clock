@@ -40,6 +40,12 @@ export default {
     components: {
         Settings
     },
+    props: {
+        showSettings: {
+            type: Boolean,
+            required: true
+        }
+    },
     data() {
         return {
             isRunning: false,
@@ -50,8 +56,7 @@ export default {
                 { name: "Pomodoro", minutes: 25 },
                 { name: "Short Break", minutes: 5 },
                 { name: "Long Break", minutes: 10 }
-            ],
-            showSettings: false
+            ]
         };
     },
     computed: {

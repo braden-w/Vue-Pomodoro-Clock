@@ -4,10 +4,19 @@
             <v-container>
                 <v-row>
                     <v-col sm="6" offset-sm="3">
-                        <Pomodoro />
+                        <Pomodoro :showSettings="showSettings" />
                     </v-col>
 
-                    <v-btn color="secondary" dark small absolute top right fab>
+                    <v-btn
+                        @click="showSettings = !showSettings"
+                        color="secondary"
+                        dark
+                        small
+                        absolute
+                        top
+                        right
+                        fab
+                    >
                         <v-icon>mdi-cog-outline</v-icon>
                     </v-btn>
                 </v-row>
@@ -23,6 +32,11 @@ export default {
     name: "App",
     components: {
         Pomodoro
+    },
+    data() {
+        return {
+            showSettings: false
+        };
     }
 };
 </script>
