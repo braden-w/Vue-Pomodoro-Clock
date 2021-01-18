@@ -4,6 +4,16 @@
       <v-tab v-for="tab in tabsTitles" :key="tab">
         {{ tab }}
       </v-tab>
+      <v-tabs-items v-model="timerType">
+        <v-tab-item>
+          <v-card color="basil" flat class="pa-5">
+            <h1 class="time">00:00</h1>
+            <v-btn color="primary">Start</v-btn>
+            <v-btn>Stop</v-btn>
+            <v-btn>Reset</v-btn>
+          </v-card>
+        </v-tab-item>
+      </v-tabs-items>
     </v-tabs>
   </v-card>
 </template>
