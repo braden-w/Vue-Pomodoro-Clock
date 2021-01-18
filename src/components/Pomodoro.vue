@@ -6,19 +6,25 @@
       </v-tab>
       <v-tabs-items v-model="timerType">
         <v-tab-item>
-          <v-card color="basil" flat class="pa-5">
+          <v-card
+            color="basil"
+            flat
+            class="pa-5 d-flex flex-column justify-center align-center"
+          >
             <h1 class="time">00:00</h1>
-            <v-btn color="primary"
-              ><v-icon left small>mdi-play-circle-outline</v-icon>Start</v-btn
-            >
-            <v-btn color="error">
-              <v-icon left small>mdi-stop-circle-outline</v-icon>
-              Stop</v-btn
-            >
-            <v-btn>
-              <v-icon left small>mdi-restart</v-icon>
-              Reset</v-btn
-            >
+            <div class="buttons">
+              <v-btn color="primary"
+                ><v-icon left small>mdi-play-circle-outline</v-icon>Start</v-btn
+              >
+              <v-btn color="error">
+                <v-icon left small>mdi-stop-circle-outline</v-icon>
+                Stop</v-btn
+              >
+              <v-btn>
+                <v-icon left small>mdi-restart</v-icon>
+                Reset</v-btn
+              >
+            </div>
           </v-card>
         </v-tab-item>
       </v-tabs-items>
