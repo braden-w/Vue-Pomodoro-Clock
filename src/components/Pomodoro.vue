@@ -30,7 +30,11 @@
                 >
             </div>
         </v-card>
-        <Settings :showSettings="showSettings"></Settings>
+        <Settings
+            :showSettings="showSettings"
+            :closeSettings="closeSettings"
+            :save="save"
+        ></Settings>
     </v-card>
 </template>
 
@@ -43,6 +47,10 @@ export default {
     props: {
         showSettings: {
             type: Boolean,
+            required: true
+        },
+        closeSettings: {
+            type: Function,
             required: true
         }
     },
@@ -99,6 +107,9 @@ export default {
             this.currentTimer = num;
             // TODO: Make this toggleable
             this.reset();
+        },
+        save() {
+            this.closeSettings();
         }
     }
 };

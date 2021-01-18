@@ -4,7 +4,10 @@
             <v-container>
                 <v-row>
                     <v-col sm="6" offset-sm="3">
-                        <Pomodoro :showSettings="showSettings" />
+                        <Pomodoro
+                            :showSettings="showSettings"
+                            :closeSettings="closeSettings"
+                        />
                     </v-col>
 
                     <v-btn
@@ -37,6 +40,11 @@ export default {
         return {
             showSettings: false
         };
+    },
+    methods: {
+        closeSettings() {
+            this.showSettings = false;
+        }
     }
 };
 </script>
