@@ -13,14 +13,14 @@
           >
             <h1 class="time">{{ displayMinutes }}:{{ displaySeconds }}</h1>
             <div class="buttons">
-              <v-btn color="primary"
+              <v-btn color="primary" @click="start"
                 ><v-icon left small>mdi-play-circle-outline</v-icon>Start</v-btn
               >
-              <v-btn color="error">
+              <v-btn color="error" @click="stop">
                 <v-icon left small>mdi-stop-circle-outline</v-icon>
                 Stop</v-btn
               >
-              <v-btn>
+              <v-btn @click="reset">
                 <v-icon left small>mdi-restart</v-icon>
                 Reset</v-btn
               >
