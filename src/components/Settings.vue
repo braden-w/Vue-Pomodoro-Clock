@@ -3,7 +3,12 @@
         <v-card>
             <v-card-title><span class="headline">Settings</span></v-card-title>
             <v-card-text>
-                <v-text-field label="Pomodoro"></v-text-field>
+                <v-text-field
+                    v-for="(timer, i) in timers"
+                    :key="i"
+                    label="Pomodoro"
+                    v-model="timers[i].minutes"
+                />
             </v-card-text>
             <v-card-actions>
                 <v-spacer></v-spacer>
@@ -29,7 +34,19 @@ export default {
         save: {
             type: Function,
             required: true
+        },
+        timers: {
+            type: Array,
+            require: true
         }
+    },
+    data() {
+        return { updatedTimers: [] };
+    },
+    mounted() {
+        this.updatedTimers = this.timers.map(timer => {
+            return timer.minutes;
+        });
     }
 };
 </script>

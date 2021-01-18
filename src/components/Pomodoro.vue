@@ -34,6 +34,7 @@
             :showSettings="showSettings"
             :closeSettings="closeSettings"
             :save="save"
+            :timers="timers"
         ></Settings>
     </v-card>
 </template>
