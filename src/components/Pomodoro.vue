@@ -42,6 +42,18 @@ export default {
       tabsTitles: ["Pomodoro", "Short Break", "Long Break"],
     }
   },
+  computed:{
+    displayMinutes(){
+      return Math.floor(totalSeconds/60);
+    },
+    displaySeconds(){
+      const seconds=totalSeconds%60;
+      if (seconds>10){
+        return '0' + seconds
+      }
+      return seconds
+    }
+  }
   methods: {
     start() {
       setInterval(() => {}, 1000)
