@@ -11,7 +11,7 @@
             flat
             class="pa-5 d-flex flex-column justify-center align-center"
           >
-            <h1 class="time">{{ display.minutes }}:{{ display.seconds }}</h1>
+            <h1 class="time">{{ displayMinutes }}:{{ displaySeconds }}</h1>
             <div class="buttons">
               <v-btn color="primary"
                 ><v-icon left small>mdi-play-circle-outline</v-icon>Start</v-btn
@@ -48,13 +48,16 @@ export default {
     },
     displaySeconds(){
       const seconds=totalSeconds%60;
-      if (seconds>10){
-        return '0' + seconds
-      }
-      return seconds
+      return this.formatTimes(seconds)
     }
   }
   methods: {
+    formatTime(time){
+      if (seconds>10){
+        return '0' + seconds
+      }
+      return time.toString()
+    },
     start() {
       setInterval(() => {}, 1000)
     },
