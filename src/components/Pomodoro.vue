@@ -77,9 +77,13 @@ export default {
     },
     reset() {
       this.stop()
-      this.totalSeconds = 25 * 60
+      this.totalSeconds = this.timers[this.currentTimer].minutes * 60
     },
-    changeCurrentTimer() {},
+    changeCurrentTimer(num) {
+      this.currentTimer = num
+      // TODO: Make this toggleable
+      this.reset()
+    },
   },
 }
 </script>
