@@ -33,4 +33,9 @@ export default {
 .v-card {
   width: 600px;
 }
+.time {
+  font-size: 80px;
+  font-weight: 400;
+  align: center;
+}
 </style>
