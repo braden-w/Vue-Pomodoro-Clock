@@ -11,8 +11,14 @@
             <v-btn color="primary"
               ><v-icon left small>mdi-play-circle-outline</v-icon>Start</v-btn
             >
-            <v-btn color="error">Stop</v-btn>
-            <v-btn>Reset</v-btn>
+            <v-btn color="error">
+              <v-icon left small>mdi-stop-circle-outline</v-icon>
+              Stop</v-btn
+            >
+            <v-btn>
+              <v-icon left small>mdi-restart</v-icon>
+              Reset</v-btn
+            >
           </v-card>
         </v-tab-item>
       </v-tabs-items>
