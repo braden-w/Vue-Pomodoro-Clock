@@ -1,8 +1,8 @@
 <template>
-  <v-card>
-    <vtabs v-model="timerType">
-      <vtab v-for="tab in tabsTitles" :key="tab">{{ tab }}</vtab>
-    </vtabs>
+  <v-card class="mt-8">
+    <v-tabs v-model="timerType">
+      <v-tab v-for="tab in tabsTitles" :key="tab">{{ tab }}</v-tab>
+    </v-tabs>
   </v-card>
 </template>
 
