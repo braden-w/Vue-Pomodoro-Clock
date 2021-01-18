@@ -8,7 +8,9 @@
         <v-tab-item>
           <v-card color="basil" flat class="pa-5">
             <h1 class="time">00:00</h1>
-            <v-btn color="primary">Start</v-btn>
+            <v-btn color="primary"
+              ><v-icon left small>mdi-play-circle-outline</v-icon>Start</v-btn
+            >
             <v-btn color="error">Stop</v-btn>
             <v-btn>Reset</v-btn>
           </v-card>
